@@ -22,34 +22,36 @@
 		},
 		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
 	},
-	// "customizations": {
-	// 	"vscode": {
-	// 		"extensions": [
-	// 			"mikestead.dotenv",
-	// 			"EditorConfig.EditorConfig",
-	// 			"dbaeumer.vscode-eslint",
-	// 			"GitHub.copilot",
-	// 			"MS-CEINTL.vscode-language-pack-pt-BR",
-	// 			"esbenp.prettier-vscode",
-	// 			"humao.rest-client",
-	// 			"ms-azuretools.vscode-docker",
-	// 			"ms-vscode.remote-explorer",
-	// 			"ms-vscode-remote.remote-wsl",
-	// 			"ms-vscode-remote.vscode-remote-extensionpack",
-	// 			"tomoki1207.pdf",
-	// 			"ZainChen.json",
-	// 			"mechatroner.rainbow-csv",
-	// 			"Meezilla.json",
-	// 			"AykutSarac.jsoncrack-vscode",
-	// 			"MariusAlchimavicius.json-to-ts",
-	// 			"oliversturm.fix-json",
-	// 			"xyz.plsql-language",
-	// 			"inferrinizzard.prettier-sql-vscode",
-	// 			"adpyke.vscode-sql-formatter",
-	// 			"ms-vscode.sublime-keybindings"
-	// 		]
-	// 	}
-	// }
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mikestead.dotenv",
+				"EditorConfig.EditorConfig",
+				"dbaeumer.vscode-eslint",
+				"GitHub.copilot",
+				"MS-CEINTL.vscode-language-pack-pt-BR",
+				"esbenp.prettier-vscode",
+				"humao.rest-client",
+				"ms-azuretools.vscode-docker",
+				"ms-vscode.remote-explorer",
+				"ms-vscode-remote.remote-wsl",
+				"ms-vscode-remote.vscode-remote-extensionpack",
+				"tomoki1207.pdf",
+				"ZainChen.json",
+				"mechatroner.rainbow-csv",
+				"Meezilla.json",
+				"AykutSarac.jsoncrack-vscode",
+				"MariusAlchimavicius.json-to-ts",
+				"oliversturm.fix-json",
+				"xyz.plsql-language",
+				"inferrinizzard.prettier-sql-vscode",
+				"adpyke.vscode-sql-formatter",
+				"ms-vscode.sublime-keybindings",
+				"Orta.vscode-jest",
+				"firsttris.vscode-jest-runner"
+			]
+		}
+	}
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

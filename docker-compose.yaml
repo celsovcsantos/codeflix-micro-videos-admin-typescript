@@ -1,8 +1,6 @@
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
+    build: .
     command: .docker/start.sh #dar permissão de execução: chmod +x .docker/start.sh
     ports:
       - 3000:3000
