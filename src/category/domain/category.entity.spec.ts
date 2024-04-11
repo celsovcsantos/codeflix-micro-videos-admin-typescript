@@ -1,5 +1,7 @@
+import { templateSettings } from 'lodash';
 import { Uuid } from '../../shared/domain/value-objects/uuid.vo';
 import { Category } from './category.entity';
+import { EntityValidationError } from '../../shared/domain/validators/validation.error';
 
 describe('Category Unit Tests', () => {
   let validateSpy: any;
@@ -139,5 +141,27 @@ describe('Category Unit Tests', () => {
     category.deactivate();
     expect(category.is_active).toBeFalsy();
     expect(validateSpy).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('Category Validator', () => {
+  describe('create command', () => {
+    test('category with name null', () => {
+      expect(() => {
+        Category.create({
+          name: null,
+        });
+      }).toThrow(
+        new EntityValidationError([{ name: ['name should not be null'] }])
+      );
+
+      // try {
+      //   Category.create({
+      //     name: '',
+      //   });
+      // } catch (error) {
+      //   console.log(error);
+      // }
+    });
   });
 });

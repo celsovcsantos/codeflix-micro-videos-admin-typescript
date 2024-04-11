@@ -29,7 +29,7 @@ class CategoryRules {
   }
 }
 
-class CategoryValidator extends ClassValidatorFields<CategoryRules> {
+export class CategoryValidator extends ClassValidatorFields<CategoryRules> {
   validate(entity: Category) {
     return super.validate(new CategoryRules(entity));
   }
