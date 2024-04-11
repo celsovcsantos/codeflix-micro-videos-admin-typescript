@@ -1,6 +1,12 @@
 services:
   app:
-    build: .
+    container_name: api_micro_videos_admin_typescript
+    environment:
+      - TZ=America/Sao_Paulo
+      - NODE_ENV=DEV
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     command: .docker/start.sh #dar permissão de execução: chmod +x .docker/start.sh
     ports:
       - 3000:3000
