@@ -1,7 +1,7 @@
 import { Entity } from '../entity';
 import { ValueObject } from '../value-object';
 import { SearchResult } from './search-result';
-import { SearchParams } from './searh-params';
+import { SearchParams } from './search-params';
 
 export interface IRepository<E extends Entity, EntityId extends ValueObject> {
   insert(entity: E): Promise<void>;

@@ -19,11 +19,11 @@ export class SearchParams<Filter = string> extends ValueObject {
 
   constructor(props: SearchParamsConstructorProps<Filter> = {}) {
     super();
-    this._page = props.page;
-    this._per_page = props.per_page;
-    this._sort = props.sort;
-    this._sort_dir = props.sort_dir;
-    this._filter = props.filter;
+    this.page = props.page!;
+    this.per_page = props.per_page!;
+    this.sort = props.sort!;
+    this.sort_dir = props.sort_dir!;
+    this.filter = props.filter!;
   }
 
   get page() {
@@ -33,7 +33,12 @@ export class SearchParams<Filter = string> extends ValueObject {
   private set page(value: number) {
     let _page = +value;
 
-    if (Number.isNaN(_page) || _page <= 0 || parseInt(_page as any) !== _page) {
+    if (
+      _page === null ||
+      Number.isNaN(_page) ||
+      _page <= 0 ||
+      parseInt(_page as any) !== _page
+    ) {
       _page = 1;
     }
 
